@@ -19,7 +19,7 @@ class CreateOcupacionPersonasTable extends Migration
             $table->string('domicilio_laboral');
             $table->string('telefono_laboral');
             $table->unsignedBigInteger('id_persona');
-            $table->foreign('id_persona')->refences('id')->on('personas');
+            $table->foreign('id_persona')->references('id')->on('personas');
             $table->timestamps();
         });
     }
