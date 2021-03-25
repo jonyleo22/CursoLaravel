@@ -4,23 +4,20 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePersonasTable extends Migration
+class CreateSexoPersonasTable extends Migration
 {
 
     public function up()
     {
-        Schema::create('personas', function (Blueprint $table) {
+        Schema::create('sexo_personas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('dni', 8);
-            $table->string('nombre');
-            $table->string('apellido');
+            $table->string('nombre_sexo');
             $table->timestamps();
         });
     }
 
-
     public function down()
     {
-        Schema::dropIfExists('personas');
+        Schema::dropIfExists('sexo_personas');
     }
 }
